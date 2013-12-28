@@ -1,5 +1,8 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+/* Import colors */
+@import 'utils/colors';
+
 /* Older browsers upgrade recommendation */
 .browsehappy {
   margin: 0.2em 0;
@@ -14,3 +17,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     max-width: 730px;
   }
 }
+
+/* Import other stylesheets */
+@import 'partials/navbar';
+@import 'partials/footer';

@@ -1,0 +1,16 @@
+/* Navbar */
+$bgcolor: rgb(248, 248, 248);
+
+/* Wrap navbar in a div for full-width background */
+.navbar-wrapper {
+  background: $bgcolor;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e7e7e7;
+
+  nav.navbar {
+    background: $bgcolor;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+}
