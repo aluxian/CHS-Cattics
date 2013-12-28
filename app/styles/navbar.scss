@@ -1,0 +1,28 @@
+/* Header */
+.header {
+  padding-top: 20px;
+  color: #777;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Space out the masthead */
+  .header {
+      margin-bottom: 30px;
+  }
+}
