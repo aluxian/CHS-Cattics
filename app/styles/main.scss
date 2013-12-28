@@ -6,6 +6,13 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Import Compass mixins */
 @import 'compass/css3/transition';
 
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* Older browsers upgrade recommendation */
 .browsehappy {
   margin: 0.2em 0;
