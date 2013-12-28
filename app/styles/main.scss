@@ -3,6 +3,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Import colors */
 @import 'utils/colors';
 
+/* Import Compass mixins */
+@import 'compass/css3/transition';
+
 /* Older browsers upgrade recommendation */
 .browsehappy {
   margin: 0.2em 0;

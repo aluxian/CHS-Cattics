@@ -3,7 +3,7 @@
 .navbar-wrapper {
   background: $color-flat-carrot;
   margin-bottom: 20px;
-  border-bottom: 2px solid $color-flat-pumpkin;
+  border-bottom: 3px solid $color-flat-pumpkin;
 
   nav {
     background: none;
@@ -11,8 +11,31 @@
     border: none;
     border-radius: 0;
 
-    .navbar-brand, .navbar-collapse > ul > li a {
+    .navbar-brand {
+      @include single-transition(background-color, 0.2s, linear);
       color: #fff;
+
+      &:hover, &.active {
+        background: $color-flat-pumpkin;
+        color: #fff;
+      }
+    }
+
+    .navbar-collapse > ul > li {
+      @include single-transition(background-color, 0.2s, linear);
+
+      &.active a, &.active a:hover {
+        background: $color-flat-pumpkin;
+        color: #fff;
+      }
+
+      &:hover {
+        background: $color-flat-pumpkin;
+      }
+
+      &:hover a, a {
+        color: #fff;
+      }
     }
   }
 }
