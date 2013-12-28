@@ -12,6 +12,10 @@ angular.module('catticsApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/leaderboard', {
+        templateUrl: 'partials/leaderboard',
+        controller: 'LeaderboardCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

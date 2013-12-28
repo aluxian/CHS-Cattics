@@ -7,12 +7,12 @@ angular.module('catticsApp')
       'link': '/'
     },
     {
-      'title': 'About',
-      'link': '#'
+      'title': 'Leaderboard',
+      'link': '/leaderboard'
     },
     {
-      'title': 'Contact',
-      'link': '#'
+      'title': 'Sign in',
+      'link': '/signin'
     }];
 
     $scope.isActive = function(route) {
