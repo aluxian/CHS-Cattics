@@ -1,34 +1,14 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
-/* Import colors */
-@import 'utils/colors';
-
-/* Import Compass mixins */
-@import 'compass/css3/transition';
-
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* Import utils */
+@import 'utils/variables';
+@import 'utils/general';
+@import 'utils/responsive';
 
-/* Older browsers upgrade recommendation */
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-
-/* Import other stylesheets */
+/* Import partials */
 @import 'partials/home';
-@import 'partials/navbar';
+@import 'partials/header';
 @import 'partials/footer';

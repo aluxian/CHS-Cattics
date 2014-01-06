@@ -1,5 +1,148 @@
 /* Home */
-/* Carousel */
-.carousel .carousel-inner {
-  max-height: 500px;
+// Link style
+.link {
+  padding: 4px 7px;
+  border-radius: 3px;
+  transition: all 0.15s linear 0s;
+
+  &:hover {
+    background: rgba(0,0,0,0.3);
+  }
+}
+
+// Navbar
+.home nav {
+  padding-left: 15px;
+
+  .logo {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+  .login {
+    @extend .link;
+    font-size: 17px;
+    margin-top: 8px;
+  }
+
+  .logo, .login {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+}
+
+// Centered section
+.home section {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-top: -200px;
+  position: absolute;
+  top: 50%;
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 30px;
+  }
+
+  h1, h2 {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  .facebook-login {
+    height: 49px;
+    line-height: 32px;
+    margin-top: 30px;
+    padding: 7px 17px 0 16px;
+    border-radius: 3px;
+    background: #4568b2;
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,0.15) inset;
+    transition: all 0.15s linear 0s;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      background: #5475bd;
+    }
+
+    &:active {
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15), rgba(0,0,0,0.2) 0px 1px 3px 0px inset, rgba(255,255,255,0.15) 0px 1px 0px 0px inset;
+    }
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url(../images/icons/social.png) 0px 0px no-repeat;
+      background-size: 80px 25px;
+    }
+
+    .text {
+      margin-left: 5px;
+      color: white;
+      font-size: 20px;
+      vertical-align: middle;
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+    }
+  }
+}
+
+// Bottem content
+.home footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 30px;
+
+  .more-owners {
+    text-align: left;
+    padding-left: 0;
+
+    a {
+      @extend .link;
+    }
+  }
+
+  .bg-info {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -1px;
+
+    span a {
+      font-weight: bold;
+
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+
+  .more-cats {
+    text-align: right;
+    padding-right: 0;
+
+    a {
+      @extend .link;
+    }
+  }
+
+  .more-owners, .bg-info, .more-cats {
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
