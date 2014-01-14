@@ -4,14 +4,19 @@ html {
 }
 
 body {
-  background: #f4f4f4;
-  font-family: $font-1;
+  height: 100%;
+  background: white;
+  font-family: $font-lato;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-1;
+  font-family: $font-lato;
 }
 
 a {
   cursor: pointer;
+}
+
+[ng-view] {
+  height: 100%;
 }

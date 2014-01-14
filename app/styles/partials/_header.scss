@@ -1,11 +1,71 @@
 /* Header */
 header {
-  background: #222;
+  background: $color-emerald;
 }
 
 /* Navbar */
-nav.navbar {
+.navbar {
   border: none;
   border-radius: 0;
   margin-bottom: 0;
+  background-color: $color-emerald;
+
+  .navbar-brand {
+    padding-left: 0;
+  }
+
+  .navbar-nav > li > a {
+    transition: background 0.1s linear;
+  }
+
+  .navbar-nav > li:hover > a {
+    background-color: $color-nephritis;
+  }
+
+  .navbar-nav > li:last-child > a {
+    margin-right: -15px;
+  }
+
+  .navbar-brand, .navbar-nav > li > a {
+    color: white;
+  }
+}
+
+/* Tabs list style */
+.nav-tabs {
+  border-top: 4px solid $color-nephritis;
+  background-color: $color-belize-hole;
+
+  .nav-tabs-list {
+    padding: 15px 15px 5px 15px;
+    list-style: none;
+
+    .nav-tab {
+      display: inline;
+      font-size: 28px;
+      margin-right: 15px;
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 300;
+        text-decoration: none;
+        padding: 3px 10px 6px;
+        border-radius: 3px;
+        transition: background 0.15s linear;
+
+        &:hover {
+          background: rgba(235, 235, 235, 0.17);
+        }
+      }
+
+      &.active a {
+        color: white;
+        font-weight: 400;
+      }
+
+      &:first-child {
+        margin-left: -10px;
+      }
+    }
+  }
 }

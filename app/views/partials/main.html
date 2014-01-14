@@ -2,9 +2,7 @@
   /* Random body background */
   var photos = 9;
   var no = Math.floor(Math.random()*photos)+1;
-  document.body.style.backgroundImage = 'url(../images/backgrounds/' + no + '.jpg)';
-  document.body.style.backgroundPosition = 'center';
-  document.body.style.backgroundSize = 'cover';
+  document.getElementsByClassName('home')[0].style.backgroundImage = 'url(../images/backgrounds/' + no + '.jpg)';
 </script>
 
 <div class="home">
@@ -17,23 +15,34 @@
   <section class="container">
     <h1>Community for Cat Lovers</h1>
     <h2>Upload photos, join competitions and meet other owners!</h2>
-    <a href="#" class="facebook-login">
+
+    <a href="#" class="login-facebook">
       <span class="icon"></span>
       <span class="text">Sign up with Facebook</span>
     </a>
+
+    <!-- <a href="#" class="login-twitter">
+      <span class="icon"></span>
+      <span class="text">Sign up with Twitter</span>
+    </a>
+
+    <a href="#" class="login-gplus">
+      <span class="icon"></span>
+      <span class="text">Sign up with Google+</span>
+    </a> -->
   </section>
 
   <footer class="container">
     <div class="col-xs-4 more-owners">
-      <a href="#">Explore popular cat owners ▸</a>
+      <a href="/explore/owners">Explore popular cat owners ▸</a>
     </div>
 
     <div class="col-xs-4 bg-info">
-      <span>Meet <a href="#">Katy</a>, <a href="#">Tanya</a>'s youngest kitten</span>
+      <span>Meet <a href="/cat/id">Katy</a>, <a href="/owner/id">Tanya</a>'s youngest kitten</span>
     </div>
 
     <div class="col-xs-4 more-cats">
-      <a href="#">Explore other lovely cats ▸</a>
+      <a href="/explore/cats">Explore other lovely cats ▸</a>
     </div>
   </footer>
 </div>

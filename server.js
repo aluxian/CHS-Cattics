@@ -27,7 +27,8 @@ var api = require('./lib/controllers/api'),
     index = require('./lib/controllers');
 
 // Server Routes
-app.get('/api/awesomeThings', api.awesomeThings);
+app.get('/api/explore/cats', api.exploreCats);
+app.get('/api/explore/owners', api.exploreOwners);
 
 // Angular Routes
 app.get('/partials/*', index.partials);

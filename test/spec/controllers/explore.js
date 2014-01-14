@@ -1,11 +1,11 @@
 'use strict';
 
-describe('Controller: LeaderboardCtrl', function () {
+describe('Controller: ExploreCtrl', function () {
 
   // load the controller's module
   beforeEach(module('catticsApp'));
 
-  var LeaderboardCtrl,
+  var ExploreCtrl,
     scope,
     $httpBackend;
 
@@ -15,7 +15,7 @@ describe('Controller: LeaderboardCtrl', function () {
     $httpBackend.expectGET('/api/awesomeThings')
       .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
     scope = $rootScope.$new();
-    LeaderboardCtrl = $controller('LeaderboardCtrl', {
+    ExploreCtrl = $controller('ExploreCtrl', {
       $scope: scope
     });
   }));
