@@ -1,0 +1,22 @@
+/* Footer */
+footer {
+  height: 60px;
+  background: $color-belize-hole;
+  padding-top: 17px;
+
+  .container p {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+
+    a {
+      color: white;
+      padding-bottom: 3px;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+}
