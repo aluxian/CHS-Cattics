@@ -1,5 +1,12 @@
 <div ng-include="'partials/header'"></div>
 
+<nav class="nav-tabs" role="navigation">
+  <ul class="nav-tabs-list container">
+    <li class="nav-tab" is-active="/explore/cats"><a href="/explore/cats">Cats</a></li>
+    <li class="nav-tab" is-active="/explore/owners"><a href="/explore/owners">Owners</a></li>
+  </ul>
+</nav>
+
 <div class="explore">
   <section class="container">
     <div class="row" ng-repeat="row in data">
