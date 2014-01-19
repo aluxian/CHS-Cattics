@@ -12,6 +12,12 @@ header {
 
   .navbar-brand {
     padding-left: 0;
+    padding-top: 13px;
+    padding-bottom: 11px;
+
+    img {
+      height: 22px;
+    }
   }
 
   .navbar-nav > li > a {
@@ -26,7 +32,7 @@ header {
     margin-right: -15px;
   }
 
-  .navbar-brand, .navbar-nav > li > a {
+  .navbar-nav > li > a {
     color: white;
   }
 }
