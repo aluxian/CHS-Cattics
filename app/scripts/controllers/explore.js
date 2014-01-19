@@ -7,14 +7,20 @@ angular.module('catticsApp')
 
     // Pagination
     var page = parseInt($location.search().page) || 1;
-    $scope.paginationPages = [1, 2, 3, 4, 5, 6];
+    Restangular.all('explore').get(lastUrlComp, {count: true}).then(function(pages) {
+      pages = parseInt(pages);
+
+      $scope.paginationPages = Array.apply(null, {length: pages}).map(function(e, i) {
+        return i+1;
+      });
+
+      $scope.isNextDisabled = function() {
+        return page === pages;
+      };
+    });
 
     $scope.isPreviousDisabled = function() {
       return page === 1;
-    };
-
-    $scope.isNextDisabled = function() {
-      return page === $scope.paginationPages[$scope.paginationPages.length-1];
     };
 
     $scope.isPageActive = function(checkPage) {
@@ -39,23 +45,20 @@ angular.module('catticsApp')
 
     // API
     Restangular.one('explore').getList(lastUrlComp, {page: page}).then(function(res) {
-      var columnsNo = 4;
-      var rowsNo = 5;
-      var photosPerPage = rowsNo * columnsNo;
+      var rows = [];
 
-      $scope.pages = [];
+      res.forEach(function(p) {
+        var ownerType = p.ownerType.toLowerCase();
+        var owner = p.owner[ownerType];
+        p.imgLink = '/' + ownerType + '/' + owner._id + '/photo/' + p._id;
+        p.titleLink = '/' + ownerType + '/' + owner._id;
+        p.title = owner.info.name;
+      });
 
-      for (var pi = 0; pi < Math.ceil(res.length / photosPerPage); pi++) {
-        var rows = [];
-
-        for (var ri = 0; ri < rowsNo; ri++) {
-          var offset = pi * photosPerPage + ri * columnsNo;
-          var columns = res.slice(offset, offset + columnsNo);
-
-          rows.push(columns);
-        }
-
-        $scope.pages.push(rows);
+      for (var i = 0; i < 5; i++) {
+        rows.push(res.slice(i*4, i*4+4));
       }
+
+      $scope.data = rows;
     });
   });
