@@ -1,13 +1,12 @@
 'use strict';
 
 angular.module('catticsApp')
-  .controller('ExploreCtrl', function ($scope, $location, Restangular) {
-    var path = $location.path();
-    var lastUrlComp = path.substring(path.lastIndexOf('/')+1);
+  .controller('ExploreCtrl', function ($scope, $routeParams, $location, Restangular) {
+    var exploreWhat = $routeParams.what;
 
     // Pagination
     var page = parseInt($location.search().page) || 1;
-    Restangular.all('explore').get(lastUrlComp, {count: true}).then(function(pages) {
+    Restangular.all('explore').get(exploreWhat, {count: true}).then(function(pages) {
       pages = parseInt(pages);
 
       $scope.paginationPages = Array.apply(null, {length: pages}).map(function(e, i) {
@@ -44,7 +43,7 @@ angular.module('catticsApp')
     };
 
     // API
-    Restangular.one('explore').getList(lastUrlComp, {page: page}).then(function(res) {
+    Restangular.one('explore').getList(exploreWhat, {page: page}).then(function(res) {
       var rows = [];
 
       res.forEach(function(p) {

@@ -29,6 +29,8 @@ var api = require('./lib/controllers/api'),
 // Server Routes
 app.get('/api/explore/cats', api.exploreCats);
 app.get('/api/explore/owners', api.exploreOwners);
+app.get('/api/cat/:id', api.catProfile);
+app.get('/api/owner/:id', api.ownerProfile);
 
 // Angular Routes
 app.get('/partials/*', index.partials);

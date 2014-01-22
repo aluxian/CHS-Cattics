@@ -9,7 +9,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'utils/responsive';
 
 /* Import partials */
-@import 'partials/home';
+@import 'partials/landing';
 @import 'partials/header';
 @import 'partials/footer';
 @import 'partials/explore';
+@import 'partials/cat-profile';
+@import 'partials/owner-profile';

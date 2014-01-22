@@ -17,6 +17,10 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  transition: background 0.1s linear;
+}
+
 [ng-view] {
   height: 100%;
 }
