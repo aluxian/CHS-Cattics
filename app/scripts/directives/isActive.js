@@ -8,7 +8,7 @@ angular.module('catticsApp')
         var path = $location.path();
         var route = attrs.isActive;
 
-        if (path.indexOf(route) === 0) {
+        if (path === route) {
           element[0].className += ' active';
         }
       }

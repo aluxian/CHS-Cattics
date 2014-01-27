@@ -1,5 +1,2 @@
 # Cattics
-Cattics is all about cats!
-
-## Resources
-- Design colors: [Flat UI Colors](http://flatuicolors.com/)
+Community for Cat Lovers! Inspired by 500px.com

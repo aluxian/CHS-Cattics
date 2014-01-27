@@ -49,8 +49,19 @@ angular.module('catticsApp')
       res.forEach(function(p) {
         var ownerType = p.ownerType.toLowerCase();
         var owner = p.owner[ownerType];
-        p.imgLink = '/' + ownerType + '/' + owner._id + '/photo/' + p._id;
-        p.titleLink = '/' + ownerType + '/' + owner._id;
+
+        if (ownerType === 'cat') {
+          p.rating = p.hearts;
+          p.imgLink = '/cat/' + owner._id + '/photo/' + p._id;
+          p.titleLink = '/cat/' + owner._id;
+          p.icon = 'fa-heart';
+        } else {
+          p.rating = owner.meta.followers.length;
+          p.imgLink = '/owner/' + owner._id;
+          p.titleLink = p.imgLink;
+          p.icon = 'hidden';
+        }
+
         p.title = owner.info.name;
       });
 

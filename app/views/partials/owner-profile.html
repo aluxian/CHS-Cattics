@@ -35,15 +35,15 @@
         </li>
       </ul>
       <ul class="nav-tabs-list pull-right">
-        <li ng-repeat="cat in owner.cats" class="nav-tab" is-active="/owner/{{owner._id}}/cat/{{cat._id}}">
-          <a ng-href="/owner/{{owner._id}}/cat/{{cat._id}}">{{cat.info.name}}</a>
+        <li ng-repeat="cat in owner.cats" class="nav-tab">
+          <a ng-href="/cat/{{cat._id}}">{{cat.info.name}}</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <section class="container">
-    <p>This is the OwnerProfile view!</p>
+  <section class="well wip container">
+    <p>Page in progress :)</p>
   </section>
 </div>
 

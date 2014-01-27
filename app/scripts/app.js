@@ -14,6 +14,14 @@ angular.module('catticsApp', [
       templateUrl: 'partials/cat-photo',
       controller: 'CatPhotoCtrl'
     })*/
+    .when('/home', {
+      templateUrl: 'partials/home_activity',
+      controller: 'HomeActivityCtrl'
+    })
+    .when('/home/following', {
+      templateUrl: 'partials/home_following',
+      controller: 'HomeFollowingCtrl'
+    })
     .when('/cat/:catId', {
       templateUrl: 'partials/cat-profile',
       controller: 'CatProfileCtrl'
@@ -25,6 +33,10 @@ angular.module('catticsApp', [
     .when('/explore/:what', {
       templateUrl: 'partials/explore',
       controller: 'ExploreCtrl'
+    })
+    .when('/competitions', {
+      templateUrl: 'partials/competitions',
+      controller: 'CompetitionsCtrl'
     })
     .otherwise({
       redirectTo: '/'

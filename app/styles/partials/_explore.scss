@@ -45,19 +45,19 @@
     }
   }
 
-  .photo-hearts {
+  .photo-rating {
     position: absolute;
     bottom: 8px;
     right: 23px;
     font-size: 18px;
 
-    .hearts-number {
+    .rating-number {
       margin-right: 5px;
       display: inline-block;
     }
   }
 
-  .photo-title, .photo-hearts {
+  .photo-title, .photo-rating {
     color: white;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }

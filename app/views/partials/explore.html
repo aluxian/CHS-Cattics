@@ -14,9 +14,9 @@
         <div class="photo" ensure-equal-size ng-style="{'background-image':'url('+photo.url+')'}">
           <a class="photo-link" ng-href="{{photo.imgLink}}"></a>
           <a class="photo-title" ng-href="{{photo.titleLink}}">{{photo.title}}</a>
-          <div class="photo-hearts">
-            <span class="hearts-number">{{photo.hearts}}</span>
-            <i class="fa fa-heart"></i>
+          <div class="photo-rating">
+            <span class="rating-number">{{photo.rating}}</span>
+            <i class="fa" ng-class="photo.icon"></i>
           </div>
         </div>
       </div>

@@ -1,0 +1,16 @@
+/* Work In Progress Placeholder*/
+.wip {
+  height: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  p {
+    color: #bbb;
+    font-style: bold;
+    font-size: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
