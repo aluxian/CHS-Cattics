@@ -52,8 +52,9 @@ angular.module('catticsApp')
 
         if (ownerType === 'cat') {
           p.rating = p.hearts;
-          p.imgLink = '/cat/' + owner._id + '/photo/' + p._id;
+          //p.imgLink = '/cat/' + owner._id + '/photo/' + p._id;
           p.titleLink = '/cat/' + owner._id;
+          p.imgLink = p.titleLink;
           p.icon = 'fa-heart';
         } else {
           p.rating = owner.meta.followers.length;
