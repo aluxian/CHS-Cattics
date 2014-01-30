@@ -1,0 +1,35 @@
+<div ng-include="'partials/header'"></div>
+
+<nav class="nav-tabs" role="navigation">
+  <ul class="nav-tabs-list container">
+    <li class="nav-tab" is-active="/explore/cats"><a href="/explore/cats">Cats</a></li>
+    <li class="nav-tab" is-active="/explore/owners"><a href="/explore/owners">Owners</a></li>
+  </ul>
+</nav>
+
+<div class="explore">
+  <section class="container">
+    <div class="row" ng-repeat="row in data">
+      <div class="col-md-3" ng-repeat="photo in row">
+        <div class="photo" ensure-equal-size="" ng-style="{'background-image':'url('+photo.url+')'}">
+          <a class="photo-link" ng-href="{{photo.imgLink}}"></a>
+          <a class="photo-title" ng-href="{{photo.titleLink}}">{{photo.title}}</a>
+          <div class="photo-rating">
+            <span class="rating-number">{{photo.rating}}</span>
+            <i class="fa" ng-class="photo.icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pagination-wrapper container">
+    <ul class="pagination">
+      <li ng-class="{disabled: isPreviousDisabled()}"><a ng-click="goPrevPage()">&laquo; Previous</a></li>
+      <li ng-class="{active: isPageActive(page)}" ng-repeat="page in paginationPages"><a ng-click="goPage(page)">{{page}}</a></li>
+      <li ng-class="{disabled: isNextDisabled()}"><a ng-click="goNextPage()">Next &raquo;</a></li>
+    </ul>
+  </div>
+</div>
+
+<div ng-include="'partials/footer'"></div>

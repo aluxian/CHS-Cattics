@@ -1,0 +1,50 @@
+<div ng-include="'partials/header'"></div>
+
+<div class="cat-profile">
+  <div class="header">
+    <div class="background"></div><!--ng-style="{background: 'url('+cat.photos.0.url+')'}"-->
+    <div class="container">
+      <div class="col-avatar pull-left">
+        <img class="avatar" ng-src="{{cat.photos.0.url}}" alt="{{cat.info.name}}">
+      </div>
+
+      <div class="col-text pull-left">
+        <span class="name">{{cat.info.name}}</span><br>
+        <span class="description">{{cat.info.description}}</span>
+      </div>
+
+      <div class="col-about pull-right">
+        <span class="about-hearts">Hearted by {{cat.meta.hearts}} people</span><br>
+        <span class="about-breed">Male<!--{{cat.info.gender}}-->, {{cat.info.breed}}</span><br>
+        <button class="btn btn-info about-heart">Unheart &nbsp;<i class="fa fa-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav-tabs" role="navigation">
+    <div class="container">
+      <ul class="nav-tabs-list">
+        <li class="nav-tab" is-active="/cat/{{cat._id}}">
+          <a ng-href="/cat/{{cat._id}}">About</a>
+        </li>
+        <li class="nav-tab" is-active="/cat/{{cat._id}}/photos">
+          <a ng-href="/cat/{{cat._id}}/photos">Photos</a>
+        </li>
+        <li class="nav-tab" is-active="/cat/{{cat._id}}/hearters">
+          <a ng-href="/cat/{{cat._id}}/hearters">Hearters</a>
+        </li>
+      </ul>
+      <ul class="nav-tabs-list pull-right">
+        <li class="nav-tab">
+          <a ng-href="/owner/{{cat.owner._id}}">{{cat.owner.info.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="well wip container">
+    <p>Page in progress :)</p>
+  </section>
+</div>
+
+<div ng-include="'partials/footer'"></div>
