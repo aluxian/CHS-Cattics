@@ -7,7 +7,8 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
 RUN npm install -g bower grunt
+RUN bower install
 
-CMD [ "grunt", "serve" ]
+CMD [ "node", "server.js" ]
 
 EXPOSE 3000
