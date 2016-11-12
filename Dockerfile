@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
 RUN npm install -g bower grunt
-RUN bower install
+RUN bower install --allow-root
 
 CMD [ "node", "server.js" ]
 
